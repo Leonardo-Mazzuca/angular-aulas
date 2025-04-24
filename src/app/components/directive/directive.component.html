@@ -1,0 +1,46 @@
+
+<div class="container flex-col">
+  <p [ngClass]="{'error': hasError}">
+    Test
+  </p>
+
+  <h2 [ngClass]="classes">
+    EU AMO MINHA MUIÉ
+  </h2>
+
+  <div [ngClass]="isSpecial ? 'special' : 'default' ">
+    Sou especial!
+  </div>
+
+  <p [ngStyle]="{'background-color': color, 'font-size' : size, 'font-familly': font}">
+    Macoco
+  </p>
+
+  <div>
+
+    <h2>
+      Ng model
+    </h2>
+    <label for="ngModel">
+      NgModel
+    </label>
+    <input
+      [(ngModel)]="currentItem.name"
+      id="name1"
+    />
+
+    <p>
+      Campo: {{currentItem.name}}
+    </p>
+
+    <p>
+      UpperCase:
+      <input
+        [ngModel]="currentItem.name"
+        (ngModelChange)="setUpperCase($event)"
+        id="name2"
+      />
+    </p>
+  </div>
+
+</div>

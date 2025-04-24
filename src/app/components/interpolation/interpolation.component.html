@@ -1,0 +1,32 @@
+<section class="interpolation-container">
+
+  <div class="name-container">
+
+    <div class="name-box">
+
+      <h1>Nome: {{ name }}</h1>
+      <p>Idade: {{ age }}</p>
+
+    </div>
+
+    <div class="car-box">
+
+      <p>Marca: {{ car.make }}</p>
+      <p>Modelo: {{ car.model }}</p>
+
+    </div>
+
+    <div class="image-container">
+      <img src="{{ imageUrl }}" alt="{{ name }}" />
+    </div>
+
+    <ul class="hobbie-list">
+      @for (hobbie of hobbies; track $index) {
+      <li>
+        {{ hobbie }}
+      </li>
+      }
+    </ul>
+  </div>
+
+</section>

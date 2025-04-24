@@ -1,0 +1,30 @@
+
+.text-success {
+  color: green;
+}
+
+.text-danger {
+  color: red;
+
+}
+
+.special {
+  border: 1px solid red;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.default {
+  background-color: #000;
+  border: 1px solid #dedede;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  color: #fff;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}

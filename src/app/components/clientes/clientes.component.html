@@ -1,0 +1,43 @@
+
+<form [formGroup]="clienteForm" (ngSubmit)="save($event)">
+  <div>
+    <label>
+        Nome:
+    </label>
+    <input formControlName="nome"/>
+  </div>
+  <div>
+    <label>
+        Telefone:
+    </label>
+    <input type="tel" formControlName="telefone" />
+  </div>
+  <button class="btn-dark">
+    Enviar
+  </button>
+</form>
+<h2>
+  Lista de clientes
+</h2>
+
+<table>
+  <thead>
+    <th>id</th>
+    <th>nome</th>
+    <th>telefone</th>
+    <th>ações</th>
+  </thead>
+  <tbody>
+    @for (cliente of clientes; track cliente.id) {
+      <tr>
+        <td>{{cliente.id}}</td>
+        <td>{{cliente.nome}}</td>
+        <td>{{cliente.telefone}}</td>
+        <td>
+          <button>Editar</button>
+          <button>Deletar</button>
+        </td>
+      </tr>
+    }
+  </tbody>
+</table>
