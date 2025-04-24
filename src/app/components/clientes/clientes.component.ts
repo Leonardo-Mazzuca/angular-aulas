@@ -33,7 +33,9 @@ export class ClientesComponent {
     this.list()
   }
 
-  save (e:Event) {
-    e.preventDefault();
+  save () {
+    if(this.clienteForm.valid){
+      alert("Pode salvar!")
+    }
   }
 }
